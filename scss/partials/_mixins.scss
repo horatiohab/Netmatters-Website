@@ -1,0 +1,29 @@
+
+// Button styles
+
+@mixin btn-style {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+
+@mixin btn-hover($bg) {
+    background: $bg;
+    &:hover {
+        background:darken($bg,12%);
+        transition: all .15s ease;
+    }
+}
+
+// Service Card Button Styles
+
+@mixin card-hover($bg) {
+    background: white;
+    color: #444;
+
+    &:hover {
+        background: $bg;
+        color: white;
+    }    
+}

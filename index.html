@@ -7,39 +7,91 @@
 
         <title>HTML & CSS Reflection</title>
 
-        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="scss/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     </head>
 
     <body>
         <div class="wrapper">
-            <header class="main-head">
+            <id class="header">
+            <!-- HEADER -->
+                <header class="main-head">
+                    <div class="header-content">
+                        <a href="#"><img src="https://www.netmatters.co.uk/assets/images/f-logo.png" alt="Netmatters Logo"></a>                                      
 
-                <div id="main-logo">
-                    <a href="#"><img src="https://www.netmatters.co.uk/assets/images/f-logo.png" alt="Netmatters Logo"></a>    
-                </div>
+                        <div class="header-nav">
+                            <div>
+                                <a href="#" class="btn btn-support">
+                                    <i class="bi bi-mouse2-fill"></i>
+                                    <p>SUPPORT</p>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="btn btn-contact">
+                                    <i class="bi bi-envelope"></i>
+                                    <p>CONTACT</p>
+                                </a>
+                            </div>
+                            <div class="search">
+                                <input type="text" id="search" placeholder="Search..."name="name">
+                                <a href="#" class="btn btn-search"><i class="bi bi-search"></i></a>
+                            </div>
+                        
+                            <a href="#" class="btn-phone"><i class="bi-telephone-outbound-fill"></i></a>
+                        
+                            <div>
+                                <a href="#" class="btn btn-menu">
+                                    <hr><br>
+                                    <hr><br>
+                                    <hr><br>
+                                    <p>MENU</p>
+                                </a>
+                            </div>
+                        </div>                   
+                        
+                    </div>
+
+                    <div class="search-mobile">
+                        <i class="bi bi-search"></i>
+                        <input type="text" id="search" placeholder="Search..."name="name">
+                    </div>
+
+                </header>
                 
-
-                <div class="header-nav">
-                    <div><a href="#" class="btn btn-support">SUPPORT</a></div>
-                    <div><a href="#" class="btn btn-contact">CONTACT</a></div>
-                    <div><input type="text" id="search" name="name"></div>
-                    <div><a href="#" class="btn btn-menu">MENU</a></div>
-                </div>
-
-            </header>
+                <!-- NAVIGATION -->
+                <nav class="main-nav">
+                    <div class="nav-content">
+                        <ul>
+                            <li>
+                                <i class="nav-icons bi bi-code-slash"></i><br>
+                                <a href="#"><small>WEB</small><br>DESIGN</a>
+                            </li>
+                            <li>
+                                <i class="nav-icons bi bi-display"></i><br>
+                                <a href="#"><small>IT</small><br> SUPPORT</a>
+                            </li>
+                            <li>
+                                <i class="nav-icons bi-telephone-outbound-fill"></i><br>
+                                <a href="#"><small>TELECOMS</small><br> SERVICES</a>
+                            </li>
+                            <li>
+                                <i class="nav-icons bi bi-window"></i><br>
+                                <a href="#"><small>BESPOKE</small><br> SOFTWARE</a>
+                            </li>
+                            <li>
+                                <i class="nav-icons bi bi-bar-chart-fill"></i><br>
+                                <a href="#"><small>DIGITAL</small><br> MARKETING</a>
+                            </li>
+                            <li>
+                                <i class="nav-icons bi bi-shield-shaded"></i><br>
+                                <a href="#"><small>CYBER</small><br> SECURITY</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </id>
             
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">WEB DESIGN</a></li>
-                    <li><a href="#">IT SUPPORT</a></li>
-                    <li><a href="#">TELECOMS SERVICES</a></li>
-                    <li><a href="#">BESPOKE SOFTWARE</a></li>
-                    <li><a href="#">DIGITAL MARKETING</a></li>
-                    <li><a href="#">CYBER SECURITY</a></li>
-                </ul>
-            </nav>
-
+            <!-- SLIDER -->
             <div class="slider-image">
                 <div class="slider-text">
                     <h1>WEB DESIGN</h1>
@@ -49,11 +101,13 @@
 
             </div>
 
+            <!-- SERVICE CARDS -->
             <div class="cards">
                 <div class="card">
                     <a href="#" class="card-software">
                         <i class="card-icons bi bi-window"></i>
                         <h1>Bespoke Software</h1>
+                        <hr>
                         <p>Tailored software solutions to improve business productivity and online profits. Our expert team will ensure a software solution.</p>
                         <div class="btn btn-software">READ MORE</div>
                     </a>
@@ -63,6 +117,7 @@
                     <a href="#" class="card-it">
                         <i class="card-icons bi bi-display"></i>
                         <h1>IT Support</h1>
+                        <hr>
                         <p>Remotely managed IT services that is catered to your businesses needs, adds value and reduces costs.</p>
                         <div class="btn btn-it">READ MORE</div>    
                     </a>                    
@@ -72,6 +127,7 @@
                     <a href="#" class="card-marketing">
                         <i class="card-icons bi bi-bar-chart-fill"></i>
                         <h1>Digital Marketing</h1>
+                        <hr>
                         <p>Driving brand awareness and ROI through creative digital marketing campaigns. We review and monitor online performances.</p>
                         <div class="btn btn-marketing">READ MORE</div>        
                     </a>                    
@@ -81,6 +137,7 @@
                     <a href="#" class="card-telecoms">
                         <i class="card-icons bi-telephone-outbound-fill"></i>
                         <h1>Telecoms Services</h1>
+                        <hr>
                         <p>Stay connected with bespoke telecoms solutions when you need it most.</p>
                         <div class="btn btn-telecoms">READ MORE</div>       
                     </a>                    
@@ -90,6 +147,7 @@
                     <a href="#" class="card-web-design">
                         <i class="card-icons bi bi-code-slash"></i>
                         <h1>Web Design</h1>
+                        <hr>
                         <p>User-centric design for businesses looking to make a lasting first impression.</p>
                         <div class="btn btn-web-design">READ MORE</div>       
                     </a>                    
@@ -99,6 +157,7 @@
                     <a href="#" class="card-cyber">
                         <i class="card-icons bi bi-shield-shaded"></i>
                         <h1>Cyber Security</h1>
+                        <hr>
                         <p>Ensuring your online business stays secure 24/7, 365 days of the year.</p>
                         <div class="btn btn-cyber">READ MORE</div>        
                     </a>                    
@@ -108,6 +167,7 @@
                     <a href="#" class="card-training">
                         <i class="card-icons bi bi-book-half"></i>
                         <h1>Developer Training</h1>
+                        <hr>
                         <p>Have you considered a career in web development but you aren't sure where to start?</p>
                         <div class="btn btn-training">READ MORE</div>        
                     </a>                    

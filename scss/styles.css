@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.8px;
+}
+
+.btn {
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 3px;
+  display: flex;
+}
+
+header {
+  padding: 20px 0;
+}
+
+.header-content {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+.header-content img {
+  max-width: 100%;
+  width: 370px;
+}
+@media (min-width: 1260px) {
+  .header-content input[type=text] {
+    width: 18em;
+  }
+}
+@media (max-width: 1259px) {
+  .header-content {
+    width: 970px;
+  }
+  .header-content input[type=text] {
+    display: none;
+  }
+  .header-content .btn-search {
+    border-radius: 3px 3px 3px 3px;
+  }
+}
+@media (max-width: 991px) {
+  .header-content {
+    width: 750px;
+  }
+  .header-content input[type=text] {
+    width: 13em;
+    display: flex;
+  }
+  .header-content .btn-support,
+.header-content .btn-contact {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .header-content {
+    width: 95%;
+  }
+  .header-content .search {
+    display: none;
+  }
+  .header-content .btn-phone {
+    display: flex;
+  }
+}
+
+.header-nav {
+  display: flex;
+}
+.header-nav div {
+  display: flex;
+  margin: auto;
+  padding-left: 1.3em;
+}
+
+.btn-support {
+  background: #4183d7;
+}
+.btn-support:hover {
+  background: #2665b5;
+  transition: all 0.15s ease;
+}
+.btn-support i {
+  font-size: 23px;
+  margin: 0.5em auto;
+  display: flex;
+}
+.btn-support p {
+  font-size: 18px;
+  margin: auto;
+}
+
+.btn-contact {
+  background: #999aa2;
+}
+.btn-contact:hover {
+  background: #797a85;
+  transition: all 0.15s ease;
+}
+.btn-contact i {
+  font-size: 23px;
+  margin: 0.5em 0.1em;
+  display: flex;
+}
+.btn-contact p {
+  font-size: 18px;
+  margin: auto;
+}
+
+.btn-phone {
+  display: none;
+  color: #333645;
+  font-size: 1.5em;
+  margin: auto auto 0.9em;
+}
+
+.btn-menu {
+  background: #333645;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 0.45em 1em;
+}
+.btn-menu:hover {
+  background: #191a22;
+  transition: all 0.15s ease;
+}
+.btn-menu hr {
+  margin: 0.15em auto 0.15em auto;
+  color: white;
+}
+.btn-menu p {
+  font-size: 0.75em;
+  margin: auto;
+}
+
+.search .btn-search {
+  background: #999aa2;
+  border-radius: 0 3px 3px 0;
+}
+.search .btn-search:hover {
+  background: #797a85;
+  transition: all 0.15s ease;
+}
+.search i {
+  font-size: 23px;
+  margin: 0.5em 0.1em;
+  display: flex;
+}
+
+.search-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+  height: 47px;
+  margin: 20px auto auto auto;
+}
+.search-mobile input {
+  height: 100px;
+  width: 100%;
+}
+.search-mobile i {
+  position: absolute;
+  display: flex;
+  justify-content: right;
+}
+@media (min-width: 767px) {
+  .search-mobile {
+    display: none;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333645;
+}
+@media (max-width: 990px) {
+  nav {
+    display: none;
+  }
+}
+nav .nav-content {
+  width: 1200px;
+}
+@media (max-width: 1260px) {
+  nav .nav-content {
+    width: 970px;
+  }
+}
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  border-left: 1px solid #494d62;
+  border-right: 1px solid #1d1f28;
+}
+nav li {
+  border-right: 1px solid #494d62;
+  border-left: 1px solid #1d1f28;
+  flex-grow: 1;
+  padding: 0.5em;
+}
+nav li a,
+nav small,
+nav li {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  padding: 2;
+}
+nav i {
+  font-size: 1.2em;
+}
+
+.slider-image {
+  background-image: url("/assets/images/home-3wAI.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: calc(100vh - 178px);
+}
+
+.card {
+  margin-bottom: 4em;
+  margin-top: 1em;
+}
+
+.cards {
+  margin: 2em auto;
+  width: 75%;
+  max-width: 1200px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 990px) {
+  .cards {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.card-software,
+.card-it,
+.card-marketing,
+.card-telecoms,
+.card-web-design,
+.card-cyber,
+.card-training {
+  text-decoration: none;
+  padding: 1.5em 1em;
+  border: 1px solid lightgrey;
+  box-shadow: 0 0 1.8em 0.05em #e5e5e5;
+  border-radius: 0.25em;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-icons {
+  background-color: #67809F;
+  font-size: 1.5em;
+  color: white;
+  display: flex;
+  border-radius: 50%;
+  padding: 0.8em;
+  margin: auto;
+}
+
+.cards .btn {
+  text-align: center;
+  margin: auto;
+}
+
+.cards h1 {
+  font-size: 18px;
+}
+
+.cards p {
+  margin-bottom: 1.25em;
+  font-size: 13px;
+}
+
+hr {
+  width: 30px;
+  border-top: 2px solid;
+  margin: auto;
+}
+
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3) {
+  width: 31.5%;
+}
+@media (max-width: 990px) {
+  .card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3) {
+    width: 80%;
+  }
+}
+
+.card:nth-child(4),
+.card:nth-child(5),
+.card:nth-child(6),
+.card:nth-child(7) {
+  width: 23%;
+}
+@media (max-width: 1250px) {
+  .card:nth-child(4),
+.card:nth-child(5),
+.card:nth-child(6),
+.card:nth-child(7) {
+    width: 48.5%;
+  }
+}
+@media (max-width: 990px) {
+  .card:nth-child(4),
+.card:nth-child(5),
+.card:nth-child(6),
+.card:nth-child(7) {
+    width: 80%;
+  }
+}
+
+.card-software {
+  background: white;
+  color: #444;
+}
+.card-software:hover {
+  background: #67809F;
+  color: white;
+}
+.card-software .btn,
+.card-software .card-icons {
+  background: #67809F;
+  color: white;
+}
+.card-software:hover .btn,
+.card-software:hover .card-icons {
+  background: white;
+  color: #67809F;
+}
+.card-software:hover hr {
+  color: white;
+}
+
+.card-it {
+  background: white;
+  color: #444;
+}
+.card-it:hover {
+  background: #4183D7;
+  color: white;
+}
+.card-it .btn,
+.card-it .card-icons {
+  background: #4183D7;
+  color: white;
+}
+.card-it:hover .btn,
+.card-it:hover .card-icons {
+  background: white;
+  color: #4183D7;
+}
+.card-it:hover hr {
+  color: white;
+}
+
+.card-marketing {
+  background: white;
+  color: #444;
+}
+.card-marketing:hover {
+  background: #2ECC71;
+  color: white;
+}
+.card-marketing .btn,
+.card-marketing .card-icons {
+  background: #2ECC71;
+  color: white;
+}
+.card-marketing:hover .btn,
+.card-marketing:hover .card-icons {
+  background: white;
+  color: #2ECC71;
+}
+.card-marketing:hover hr {
+  color: white;
+}
+
+.card-telecoms {
+  background: white;
+  color: #444;
+}
+.card-telecoms:hover {
+  background: #D64541;
+  color: white;
+}
+.card-telecoms .btn,
+.card-telecoms .card-icons {
+  background: #D64541;
+  color: white;
+}
+.card-telecoms:hover .btn,
+.card-telecoms:hover .card-icons {
+  background: white;
+  color: #D64541;
+}
+.card-telecoms:hover hr {
+  color: white;
+}
+
+.card-web-design {
+  background: white;
+  color: #444;
+}
+.card-web-design:hover {
+  background: #926FB1;
+  color: white;
+}
+.card-web-design .btn,
+.card-web-design .card-icons {
+  background: #926FB1;
+  color: white;
+}
+.card-web-design:hover .btn,
+.card-web-design:hover .card-icons {
+  background: white;
+  color: #926FB1;
+}
+.card-web-design:hover hr {
+  color: white;
+}
+
+.card-cyber {
+  background: white;
+  color: #444;
+}
+.card-cyber:hover {
+  background: #F62459;
+  color: white;
+}
+.card-cyber .btn,
+.card-cyber .card-icons {
+  background: #F62459;
+  color: white;
+}
+.card-cyber:hover .btn,
+.card-cyber:hover .card-icons {
+  background: white;
+  color: #F62459;
+}
+.card-cyber:hover hr {
+  color: white;
+}
+
+.card-training {
+  background: white;
+  color: #444;
+}
+.card-training:hover {
+  background: #926FB1;
+  color: white;
+}
+.card-training .btn,
+.card-training .card-icons {
+  background: #926FB1;
+  color: white;
+}
+.card-training:hover .btn,
+.card-training:hover .card-icons {
+  background: white;
+  color: #926FB1;
+}
+.card-training:hover hr {
+  color: white;
+}/*# sourceMappingURL=styles.css.map */
