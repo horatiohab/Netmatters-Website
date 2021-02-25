@@ -189,6 +189,7 @@ nav {
   display: flex;
   justify-content: center;
   background-color: #333645;
+  border-bottom: 1px solid grey;
 }
 @media (max-width: 990px) {
   nav {
@@ -209,6 +210,7 @@ nav .nav-list {
   list-style-type: none;
   border-left: 1px solid #494d62;
   border-right: 1px solid #1d1f28;
+  line-height: 1em;
 }
 nav .nav-list-items {
   border-right: 1px solid #494d62;
@@ -217,18 +219,19 @@ nav .nav-list-items {
 }
 nav .nav-list-items .nav-links {
   display: block;
-  padding: 0.5em;
+  padding: 1.3em 0;
 }
 nav li a,
-nav small,
 nav li {
   text-decoration: none;
   text-align: center;
   color: white;
-  padding: 2;
+}
+nav small {
+  font-size: 0.63em;
 }
 nav i {
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .nav-list-web:hover {
@@ -921,35 +924,90 @@ nav i {
 .newsletter .newsletter-form {
   width: 1200px;
 }
-.newsletter .newsletter-form form {
-  padding: 2em;
+.newsletter form {
+  padding: 3em;
 }
-.newsletter .newsletter-form form .checkbox {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-}
-.newsletter .newsletter-form form .checkbox span {
-  padding: 1em;
-}
-.newsletter .newsletter-form .input-wrapper {
+.newsletter .input-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1em;
 }
-.newsletter .newsletter-form .input-wrapper .form-group {
+.newsletter .form-group {
   display: flex;
   flex-direction: column;
 }
-.newsletter .newsletter-form input[type=text] {
+.newsletter input[type=text] {
   width: 540px;
   padding: 1em 1em;
   border: 1px solid #ccc;
   border-radius: 2.5px;
   box-sizing: border-box;
 }
-.newsletter .newsletter-form input[type=text]:focus {
+.newsletter input[type=text]:focus {
   border: 1px solid #74c8f2;
   box-shadow: 0 0 0.5em 0 #74c8f2;
+}
+.newsletter .checkbox-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.newsletter .checkbox-container input {
+  opacity: 0;
+  width: 5em;
+  height: 5em;
+  cursor: pointer;
+}
+.newsletter .checkbox-container input:checked ~ .checkmark {
+  background-color: #333645;
+}
+.newsletter .checkbox-container input:checked ~ .checkmark::after, .newsletter .checkbox-container input:checked ~ .checkmark::before {
+  display: block;
+}
+.newsletter .checkmark {
+  position: absolute;
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 0.15em;
+  border: 0.2em solid #333645;
+}
+.newsletter .checkmark::before {
+  display: none;
+  position: absolute;
+  bottom: 0.4em;
+  height: 30%;
+  width: 0.15em;
+  background-color: white;
+  content: "";
+  transform: translateX(0.6em) rotate(-45deg);
+  transform-origin: left bottom;
+}
+.newsletter .checkmark::after {
+  display: none;
+  position: absolute;
+  bottom: 0.4em;
+  height: 0.15em;
+  width: 60%;
+  background-color: white;
+  content: "";
+  transform: translateX(0.6em) rotate(-45deg);
+  transform-origin: left bottom;
+}
+.newsletter input[type=submit] {
+  background-color: #333645;
+  color: white;
+  padding: 1em;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 1em;
+}
+.newsletter input[type=submit]:hover {
+  background-color: #22242E;
+  cursor: pointer;
 }
 
 footer {
@@ -964,11 +1022,38 @@ footer h3 {
 }
 footer p {
   font-size: 13px;
+  margin-top: 1.5em;
+}
+footer p a {
+  color: white;
+}
+footer p a:not(:hover) {
+  text-decoration: none;
 }
 footer .footer-content {
   width: 1200px;
   display: flex;
   justify-content: space-between;
+}
+footer .footer-content div {
+  width: 18em;
+}
+footer .social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .social-icons a {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  background-color: #262833;
+  padding: 0.3em 1.5em;
+  display: flex;
+  margin: 0.5em 0;
+}
+footer .social-icons a:hover {
+  background-color: #3B5998;
 }
 
 .awards {
