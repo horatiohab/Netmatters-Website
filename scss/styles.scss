@@ -126,8 +126,11 @@ header {
     margin: auto;
     padding: .45em 1em;
     hr {
-        margin: .15em auto .15em auto;
+        margin: .15em 0;
         color: white;
+        background-color: white;
+        border: none;
+        height: .2em;
     }
     p {
         font-size: .75em;
@@ -367,7 +370,7 @@ nav {
 
 .card { // -------- Container that holds the cards
     margin-bottom: 4em;
-    margin-top: 1em;
+    margin-top: 1em;   
 }
 
 .cards { //-------- Card Items
@@ -382,55 +385,43 @@ nav {
         justify-content: center;
         width: 100%;
     }
-}
-
-.card-software,
-.card-it,
-.card-marketing,
-.card-telecoms,
-.card-web-design,
-.card-cyber,
-.card-training { // ------- Card contents
-    text-decoration: none;
-    padding: 1.5em 1em;
-    border: 1px solid lightgrey;
-    box-shadow: 0 0 1.8em .05em #e5e5e5;
-    border-radius: 0.25em;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    a {
+        text-decoration: none;
+        padding: 1.5em 1em;
+        border: 1px solid lightgrey;
+        box-shadow: 0 0 1.8em .05em #e5e5e5;
+        border-radius: 0.25em;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .btn {
+        text-align: center;
+        margin: auto;
+        padding: .7em 1em;
+    }
+    h1 {
+        font-size: 18px;
+        color: rgb(78, 78, 78);
+    }
+    p {
+        margin-bottom: 1.25em;
+        font-size: 13px;
+        color: rgb(78, 78, 78);
+    }
+    hr {
+        width: 30px;
+        border-top: 2px solid;
+        margin: auto; 
+    }
 }
 
 .card-icons {
-    background-color: #67809F;
     font-size: 1.5em;
-    color: white;
     display: flex;
     border-radius: 50%;
     padding: .8em;
     margin: auto;    
-}
-
-.cards .btn {
-    text-align: center;
-    margin: auto;
-    padding: .7em 1em;
-}
-
-.cards h1 {
-    font-size: 18px;
-}
-
-.cards p {
-    margin-bottom: 1.25em;
-    font-size: 13px;
-}
-
-
-hr {
-    width: 30px;
-    border-top: 2px solid;
-    margin: auto; 
 }
 
 // Card Responsive Layout
@@ -459,147 +450,35 @@ hr {
 
 
 
-// Card Buttons
+// Card hover style
 
 
 .card-software {
     @include card-hover(#67809F);
-    .btn,
-    .card-icons {
-        background: #67809F;
-        color: white;
-    }
-
-    &:hover {
-        .btn,
-        .card-icons {
-            background: white;
-            color: #67809F;
-        }
-        hr {
-            color: white;
-        }
-    }
 }
 
 .card-it {
     @include card-hover(#4183D7);
-    .btn,
-    .card-icons {
-        background: #4183D7;
-        color: white;
-    }
-
-    &:hover {
-        .btn,
-        .card-icons {
-            background: white;
-            color: #4183D7;
-        }
-        hr {
-            color: white;
-        }
-    }
 }
 
 .card-marketing {
     @include card-hover(#2ECC71);
-    .btn,
-    .card-icons {
-        background: #2ECC71;
-        color: white;
-    }
-
-    &:hover {
-        .btn,
-        .card-icons {
-            background: white;
-            color: #2ECC71;
-        }
-        hr {
-            color: white;
-        }
-    }
 }
 
 .card-telecoms {
     @include card-hover(#D64541);
-    .btn,
-    .card-icons {
-        background: #D64541;
-        color: white;
-    }
-
-    &:hover {
-        .btn,
-        .card-icons {
-            background: white;
-            color: #D64541;
-        }
-        hr {
-            color: white;
-        }
-    }
 }
 
 .card-web-design {
     @include card-hover(#926FB1);
-    .btn,
-    .card-icons {
-        background: #926FB1;
-        color: white;
-    }
-
-    &:hover {
-        .btn,
-        .card-icons {
-            background: white;
-            color: #926FB1;
-        }
-        hr {
-            color: white;
-        }
-    }
 }
 
 .card-cyber {
     @include card-hover(#F62459);
-    .btn,
-    .card-icons {
-        background: #F62459;
-        color: white;
-    }
-
-    &:hover {
-        .btn,
-        .card-icons {
-            background: white;
-            color: #F62459;
-        }
-        hr {
-            color: white;
-        }
-    }
 }
 
 .card-training {
     @include card-hover(#926FB1);
-    .btn,
-    .card-icons {
-        background: #926FB1;
-        color: white;
-    }
-
-    &:hover {
-        .btn,
-        .card-icons {
-            background: white;
-            color: #926FB1;
-        }
-        hr {
-            color: white;
-        }
-    }
 }
 
 
@@ -663,7 +542,7 @@ hr {
     }
 }
 
-// News Cards
+// Article Cards
 .news-section {
     padding: 3em 0; 
     display: flex;
@@ -675,34 +554,63 @@ hr {
         flex-wrap: wrap;
         width: 1200px;
         max-width: 95%;
-        .news-card {
-            width: 370px;
-            .news-container {
-                border: 1px solid #ccc;
-                border-radius: 0 0 3px 3px;
-                border-top: none;
-                padding: 2em;
-                .btn {
-                    @include btn-hover(#926FB1);
-                    width: 6em;
-                    padding: .7em 1em;
-                }
-                h1, 
-                p {
-                    margin-bottom: 1em;
-                }
-            }
-            img {
-                border-radius: 3px 3px 0 0;
-                display: block;
-                width: 100%;
-            }
-            hr {
-                width: 100%;
-                border: .01em solid #ccc;
-            }
+    }    
+    .news-card {
+        width: 380px;
+    }    
+    .news-container {
+        border: 1px solid #ccc;
+        border-radius: 0 0 3px 3px;
+        border-top: none;
+        padding: 1.65em;
+    }
+    .img-wrapper {
+        overflow: hidden;
+    } 
+    .img-wrapper img {
+        border-radius: 3px 3px 0 0;
+        display: block;
+        width: 100%;
+        transition: .2s;
+        &:hover {
+            transform: scale(110%);
+            opacity: .8;
         }
     }
+    .news-headline {
+        font-size: .85em;
+        &:not(:hover) {
+            text-decoration: none;
+        }
+    } 
+    p {
+        font-size: .81em;
+    }   
+    .btn {
+        @include btn-hover(#926FB1);
+        width: 6em;
+        padding: .7em 1em;
+        margin: 2em 0;
+    }  
+    hr {
+        width: 100%;
+        border: none;
+        height: .1em;
+        background-color: lightgray;
+    }
+    .author {
+        margin-top: 2em;
+        display: flex;
+        img {
+            width: 3em;
+            height: 3em;
+            margin-right: 1.5em;
+        }
+        h3, 
+        span{
+            font-size: .88em;
+        }
+    } 
 }
 
 // Client Section

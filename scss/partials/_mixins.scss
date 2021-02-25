@@ -19,10 +19,27 @@
 
 @mixin card-hover($bg) {
     background: white;
-    color: #444;
+    & span,
+    i {
+        background: $bg;
+        color: white;
+    }
+    & hr {
+       color: rgb(63, 63, 63);
+    }
     &:hover {
         background: $bg;
         color: white;
+        & span,
+        i {
+            background: white;
+            color: $bg;
+        }
+        & hr,
+        h1,
+        p {
+            color: white;
+        }
     }    
 }
 

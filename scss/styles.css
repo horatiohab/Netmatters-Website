@@ -136,8 +136,11 @@ header {
   transition: all 0.15s ease;
 }
 .btn-menu hr {
-  margin: 0.15em auto 0.15em auto;
+  margin: 0.15em 0;
   color: white;
+  background-color: white;
+  border: none;
+  height: 0.2em;
 }
 .btn-menu p {
   font-size: 0.75em;
@@ -507,14 +510,7 @@ nav i {
     width: 100%;
   }
 }
-
-.card-software,
-.card-it,
-.card-marketing,
-.card-telecoms,
-.card-web-design,
-.card-cyber,
-.card-training {
+.cards a {
   text-decoration: none;
   padding: 1.5em 1em;
   border: 1px solid lightgrey;
@@ -524,35 +520,31 @@ nav i {
   flex-direction: column;
   height: 100%;
 }
-
-.card-icons {
-  background-color: #67809F;
-  font-size: 1.5em;
-  color: white;
-  display: flex;
-  border-radius: 50%;
-  padding: 0.8em;
-  margin: auto;
-}
-
 .cards .btn {
   text-align: center;
   margin: auto;
   padding: 0.7em 1em;
 }
-
 .cards h1 {
   font-size: 18px;
+  color: #4e4e4e;
 }
-
 .cards p {
   margin-bottom: 1.25em;
   font-size: 13px;
+  color: #4e4e4e;
 }
-
-hr {
+.cards hr {
   width: 30px;
   border-top: 2px solid;
+  margin: auto;
+}
+
+.card-icons {
+  font-size: 1.5em;
+  display: flex;
+  border-radius: 50%;
+  padding: 0.8em;
   margin: auto;
 }
 
@@ -594,155 +586,183 @@ hr {
 
 .card-software {
   background: white;
-  color: #444;
+}
+.card-software span,
+.card-software i {
+  background: #67809F;
+  color: white;
+}
+.card-software hr {
+  color: #3f3f3f;
 }
 .card-software:hover {
   background: #67809F;
   color: white;
 }
-.card-software .btn,
-.card-software .card-icons {
-  background: #67809F;
-  color: white;
-}
-.card-software:hover .btn,
-.card-software:hover .card-icons {
+.card-software:hover span,
+.card-software:hover i {
   background: white;
   color: #67809F;
 }
-.card-software:hover hr {
+.card-software:hover hr,
+.card-software:hover h1,
+.card-software:hover p {
   color: white;
 }
 
 .card-it {
   background: white;
-  color: #444;
+}
+.card-it span,
+.card-it i {
+  background: #4183D7;
+  color: white;
+}
+.card-it hr {
+  color: #3f3f3f;
 }
 .card-it:hover {
   background: #4183D7;
   color: white;
 }
-.card-it .btn,
-.card-it .card-icons {
-  background: #4183D7;
-  color: white;
-}
-.card-it:hover .btn,
-.card-it:hover .card-icons {
+.card-it:hover span,
+.card-it:hover i {
   background: white;
   color: #4183D7;
 }
-.card-it:hover hr {
+.card-it:hover hr,
+.card-it:hover h1,
+.card-it:hover p {
   color: white;
 }
 
 .card-marketing {
   background: white;
-  color: #444;
+}
+.card-marketing span,
+.card-marketing i {
+  background: #2ECC71;
+  color: white;
+}
+.card-marketing hr {
+  color: #3f3f3f;
 }
 .card-marketing:hover {
   background: #2ECC71;
   color: white;
 }
-.card-marketing .btn,
-.card-marketing .card-icons {
-  background: #2ECC71;
-  color: white;
-}
-.card-marketing:hover .btn,
-.card-marketing:hover .card-icons {
+.card-marketing:hover span,
+.card-marketing:hover i {
   background: white;
   color: #2ECC71;
 }
-.card-marketing:hover hr {
+.card-marketing:hover hr,
+.card-marketing:hover h1,
+.card-marketing:hover p {
   color: white;
 }
 
 .card-telecoms {
   background: white;
-  color: #444;
+}
+.card-telecoms span,
+.card-telecoms i {
+  background: #D64541;
+  color: white;
+}
+.card-telecoms hr {
+  color: #3f3f3f;
 }
 .card-telecoms:hover {
   background: #D64541;
   color: white;
 }
-.card-telecoms .btn,
-.card-telecoms .card-icons {
-  background: #D64541;
-  color: white;
-}
-.card-telecoms:hover .btn,
-.card-telecoms:hover .card-icons {
+.card-telecoms:hover span,
+.card-telecoms:hover i {
   background: white;
   color: #D64541;
 }
-.card-telecoms:hover hr {
+.card-telecoms:hover hr,
+.card-telecoms:hover h1,
+.card-telecoms:hover p {
   color: white;
 }
 
 .card-web-design {
   background: white;
-  color: #444;
+}
+.card-web-design span,
+.card-web-design i {
+  background: #926FB1;
+  color: white;
+}
+.card-web-design hr {
+  color: #3f3f3f;
 }
 .card-web-design:hover {
   background: #926FB1;
   color: white;
 }
-.card-web-design .btn,
-.card-web-design .card-icons {
-  background: #926FB1;
-  color: white;
-}
-.card-web-design:hover .btn,
-.card-web-design:hover .card-icons {
+.card-web-design:hover span,
+.card-web-design:hover i {
   background: white;
   color: #926FB1;
 }
-.card-web-design:hover hr {
+.card-web-design:hover hr,
+.card-web-design:hover h1,
+.card-web-design:hover p {
   color: white;
 }
 
 .card-cyber {
   background: white;
-  color: #444;
+}
+.card-cyber span,
+.card-cyber i {
+  background: #F62459;
+  color: white;
+}
+.card-cyber hr {
+  color: #3f3f3f;
 }
 .card-cyber:hover {
   background: #F62459;
   color: white;
 }
-.card-cyber .btn,
-.card-cyber .card-icons {
-  background: #F62459;
-  color: white;
-}
-.card-cyber:hover .btn,
-.card-cyber:hover .card-icons {
+.card-cyber:hover span,
+.card-cyber:hover i {
   background: white;
   color: #F62459;
 }
-.card-cyber:hover hr {
+.card-cyber:hover hr,
+.card-cyber:hover h1,
+.card-cyber:hover p {
   color: white;
 }
 
 .card-training {
   background: white;
-  color: #444;
+}
+.card-training span,
+.card-training i {
+  background: #926FB1;
+  color: white;
+}
+.card-training hr {
+  color: #3f3f3f;
 }
 .card-training:hover {
   background: #926FB1;
   color: white;
 }
-.card-training .btn,
-.card-training .card-icons {
-  background: #926FB1;
-  color: white;
-}
-.card-training:hover .btn,
-.card-training:hover .card-icons {
+.card-training:hover span,
+.card-training:hover i {
   background: white;
   color: #926FB1;
 }
-.card-training:hover hr {
+.card-training:hover hr,
+.card-training:hover h1,
+.card-training:hover p {
   color: white;
 }
 
@@ -821,36 +841,65 @@ hr {
   width: 1200px;
   max-width: 95%;
 }
-.news-section .news-cards .news-card {
-  width: 370px;
+.news-section .news-card {
+  width: 380px;
 }
-.news-section .news-cards .news-card .news-container {
+.news-section .news-container {
   border: 1px solid #ccc;
   border-radius: 0 0 3px 3px;
   border-top: none;
-  padding: 2em;
+  padding: 1.65em;
 }
-.news-section .news-cards .news-card .news-container .btn {
-  background: #926FB1;
-  width: 6em;
-  padding: 0.7em 1em;
+.news-section .img-wrapper {
+  overflow: hidden;
 }
-.news-section .news-cards .news-card .news-container .btn:hover {
-  background: #735093;
-  transition: all 0.15s ease;
-}
-.news-section .news-cards .news-card .news-container h1,
-.news-section .news-cards .news-card .news-container p {
-  margin-bottom: 1em;
-}
-.news-section .news-cards .news-card img {
+.news-section .img-wrapper img {
   border-radius: 3px 3px 0 0;
   display: block;
   width: 100%;
+  transition: 0.2s;
 }
-.news-section .news-cards .news-card hr {
+.news-section .img-wrapper img:hover {
+  transform: scale(110%);
+  opacity: 0.8;
+}
+.news-section .news-headline {
+  font-size: 0.85em;
+}
+.news-section .news-headline:not(:hover) {
+  text-decoration: none;
+}
+.news-section p {
+  font-size: 0.81em;
+}
+.news-section .btn {
+  background: #926FB1;
+  width: 6em;
+  padding: 0.7em 1em;
+  margin: 2em 0;
+}
+.news-section .btn:hover {
+  background: #735093;
+  transition: all 0.15s ease;
+}
+.news-section hr {
   width: 100%;
-  border: 0.01em solid #ccc;
+  border: none;
+  height: 0.1em;
+  background-color: lightgray;
+}
+.news-section .author {
+  margin-top: 2em;
+  display: flex;
+}
+.news-section .author img {
+  width: 3em;
+  height: 3em;
+  margin-right: 1.5em;
+}
+.news-section .author h3,
+.news-section .author span {
+  font-size: 0.88em;
 }
 
 .client-section {
