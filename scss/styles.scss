@@ -83,7 +83,6 @@ header {
     div {
         display: flex;
         margin: auto;
-        padding-left: 1.3em;
     }
 }
 
@@ -111,6 +110,7 @@ header {
 .btn-contact {
     display: flex;
     align-items: center;
+    padding-left: 1.3em;
     a {
         @include btn-hover(#999aa2);
         padding: .3em .9em;
@@ -136,12 +136,15 @@ header {
     margin: auto auto .9em;
 }
 
-.btn-menu {
-    @include btn-hover(#333645);
+.btn-menu {    
     display: flex; 
     flex-direction: column;
     margin: auto;
-    padding: .32em .9em;
+    padding-left: 1.3em;
+    a {
+        @include btn-hover(#333645);
+        padding: .32em .9em;
+    }
     span {
         height: 1.2em;
         display: flex;
@@ -162,8 +165,11 @@ header {
 }
 
 .search {
+    display: flex;
+    align-items: center;
+    padding-left: 1.3em;
     input {
-        padding-left: 1em;
+        padding: 1.3em 0 1.3em 1em;
         font-size: .9em;
         border: 1px solid #d6d6d6;
         box-shadow: inset 0 0 .1em .01em #d6d6d6;
@@ -174,15 +180,19 @@ header {
         }   
     }
     .btn-search {
-        @include btn-hover(#999aa2);
-        border-radius: 0 3px 3px 0;
-        padding: .3em .9em;
-        @media (max-width: 1259px) {
-            border-radius: 3px;
-        }
-        @media (max-width: 991px) {
+        display: flex;
+        align-items: center;
+        a {
+            @include btn-hover(#999aa2);
             border-radius: 0 3px 3px 0;
-        }
+            padding: .3em .9em;
+            @media (max-width: 1259px) {
+                border-radius: 3px;
+            }
+            @media (max-width: 991px) {
+                border-radius: 0 3px 3px 0;
+            }
+        }        
     }
     i {
         font-size: 23px;
@@ -196,8 +206,10 @@ header {
     flex-direction: column;
     justify-content: center;
     width: 95%;
-    height: 47px;;
+    height: 47px;
     margin: 20px auto auto auto;
+    align-items: center;
+    position: relative;
     input {
         padding-left: 1em;
         height: 100px;
@@ -215,6 +227,8 @@ header {
         position: absolute;
         display: flex;
         right: 1em;
+        top: 50%;
+        transform: translateY(-50%);
     }
     @media (min-width: 767px) {
         display: none;
@@ -576,7 +590,6 @@ nav {
     .about-text {
         width: 1200px;
         max-width: 95%;
-        // background-image: url("assets/images/netmatters-logo-bg.png");
         color: white;
         padding: 3em 0;
         h1,
@@ -591,6 +604,7 @@ nav {
             width: 10em;
             padding: .3em .4em;
             @include btn-hover(white);
+            align-items: center;
             p {
                 margin: auto;
                 font-size: 17px;
@@ -694,9 +708,9 @@ nav {
         border-radius: 3px 3px 0 0;
         display: block;
         width: 100%;
-        transition: all .2s ease-in-out;
+        transition: all .2s ease-out;
         &:hover {
-            opacity: .8;
+            opacity: .75;
             transform: scale(1.1);
         }
     }
@@ -998,7 +1012,7 @@ footer {
             max-height: 4em;
         }
         &:not(:hover) {
-            filter: grayscale(100%);
+            filter: grayscale(100);
         }
     }
 }
