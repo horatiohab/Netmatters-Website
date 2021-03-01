@@ -90,7 +90,7 @@ header {
     display: flex;
     align-items: center;
     a {
-        @include btn-hover(#4183d7);
+        @include btn-hover($it-col);
         padding: .3em .9em;
     }
     i {
@@ -113,11 +113,10 @@ header {
     padding-left: 1.3em;
     a {
         @include btn-hover(#999aa2);
-        padding: .3em .9em;
+        padding: .9em .9em;
     }
     i {
         font-size: 23px;
-        margin: .5em auto;
         display: flex;
     }
     p {
@@ -180,12 +179,14 @@ header {
         }   
     }
     .btn-search {
-        display: flex;
-        align-items: center;
         a {
             @include btn-hover(#999aa2);
             border-radius: 0 3px 3px 0;
-            padding: .3em .9em;
+            height: 3.5em;
+            width: 3.5em;
+            align-items: center;
+            display: flex;
+            justify-content: center;
             @media (max-width: 1259px) {
                 border-radius: 3px;
             }
@@ -196,8 +197,6 @@ header {
     }
     i {
         font-size: 23px;
-        margin: .5em .1em;
-        display: flex;
     }
 }
 
@@ -431,7 +430,7 @@ nav {
             justify-content: center;
         }
         a {
-            @include btn-hover(#926FB1);
+            @include btn-hover($web-col);
             padding: 1em;
         }
         span {
@@ -535,9 +534,6 @@ nav {
     @media (max-width: 1259px) {
         width: 48.5%;
     }
-    // @media (max-width: 991px) {
-    //     width: 100%;
-    // }
     @media (max-width: 767px) {
         width: 100%;
     }
@@ -549,37 +545,37 @@ nav {
 
 
 .card-software {
-    @include card-hover(#67809F);
+    @include card-hover($software-col);
 }
 
 .card-it {
-    @include card-hover(#4183D7);
+    @include card-hover($it-col);
 }
 
 .card-marketing {
-    @include card-hover(#2ECC71);
+    @include card-hover($marketing-col);
 }
 
 .card-telecoms {
-    @include card-hover(#D64541);
+    @include card-hover($telecoms-col);
 }
 
 .card-web-design {
-    @include card-hover(#926FB1);
+    @include card-hover($web-col);
 }
 
 .card-cyber {
-    @include card-hover(#F62459);
+    @include card-hover($cyber-col);
 }
 
 .card-training {
-    @include card-hover(#926FB1);
+    @include card-hover($web-col);
 }
 
 
 // About Section
 .about-image {
-    background-color: #333645;
+    background-color: $nav-bar-col;
     background-image: url("/assets/images/netmatters-logo-bg.png");
     background-position: 100%;
     background-repeat: no-repeat;
@@ -600,7 +596,7 @@ nav {
             line-height: 2em;
         }
         a {
-            color: #333645;
+            color: $nav-bar-col;
             width: 10em;
             padding: .3em .4em;
             @include btn-hover(white);
