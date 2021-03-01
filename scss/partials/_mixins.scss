@@ -1,5 +1,5 @@
 
-// --------Button styles
+// --------Button styles -----------
 
 @mixin btn-style {
     color: white;
@@ -15,7 +15,7 @@
     }
 }
 
-// -------Service Card Button Styles
+// ------- Service Card Button Styles ---------
 
 @mixin card-hover($bg) {
     background: white;
@@ -43,7 +43,7 @@
     }    
 }
 
-// ------Navbar Dropdown styles
+// ------ Navbar Dropdown styles -------
 
 @mixin dropdown($bg) {
     display: none;
@@ -53,12 +53,15 @@
     z-index: 10;
     background-color: $bg;
     width: 100%;
-    padding: .6em 0;
-
+    padding: .9em 0;
     & ul {
         width: 1200px;
         list-style-type: none;
         display: flex;
+        @media (max-width: 1259px) {
+            width: 970px;
+            font-size: .8em;
+        }
     }
 
     & li:nth-of-type(1)::after,
@@ -68,5 +71,40 @@
     li:nth-of-type(5)::after {
         content: "-";
         margin: 0 2em;
+    }
+}
+
+
+// ------- Article Catagory ---------
+
+@mixin catagory($bg) {
+    position: absolute;
+    top: 10px;            
+    right: 0px;
+    color: white;
+    padding: .1em .8em;
+    background-color: $bg;
+    z-index: 1;
+    font-size: .75em;
+    &:not(:hover) {
+        text-decoration: none;
+    }    
+}
+
+@mixin news-container($col) {
+    p {
+        font-size: .81em;
+        color: #666;
+        margin: auto 0 2em;
+    }
+    span a {
+        color: $col;
+        font-size: .855em;
+        &:not(:hover) {
+            text-decoration: none;
+        }
+    }
+    h3 {
+        margin-bottom: auto;
     }
 }
