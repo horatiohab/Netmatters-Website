@@ -78,6 +78,7 @@ header {
     }
 }
 
+// Header Navigation
 .header-nav {
     display: flex;
     div {
@@ -281,76 +282,30 @@ nav {
     }
 }
 
+
+// Navbar Hover styles
 .nav-list-web {
-    &:hover {
-        background-color: $web-col;
-        i {
-            color: white;
-        }
-    }
-    i {
-        color: $web-col;
-    }
+    @include nav-hover($web-col);
 }
 
 .nav-list-it {
-    &:hover {
-        background-color: $it-col;
-        i {
-            color: white;
-        }
-    }
-    i {
-        color: $it-col;
-    }
+    @include nav-hover($it-col);
 }
 
 .nav-list-telecoms {
-    &:hover {
-        background-color: $telecoms-col;
-        i {
-            color: white;
-        }
-    }
-    i {
-        color: $telecoms-col;
-    }
+    @include nav-hover($telecoms-col);
 }
 
 .nav-list-software {
-    &:hover {
-        background-color: $software-col;
-        i {
-            color: white;
-        }
-    }
-    i {
-        color: $software-col;
-    }
+    @include nav-hover($software-col);
 }
 
 .nav-list-marketing {
-    &:hover {
-        background-color: $marketing-col;
-        i {
-            color: white;
-        }
-    }
-    i {
-        color: $marketing-col;
-    }
+    @include nav-hover($marketing-col);
 }
 
 .nav-list-cyber {
-    &:hover {
-        background-color: $cyber-col;
-        i {
-            color: white;
-        }
-    }
-    i {
-        color: $cyber-col;
-    }
+    @include nav-hover($cyber-col);
 }
 
 // Nav Dropdown
@@ -683,6 +638,7 @@ nav {
         height: 20em;
         display: flex;
         flex-direction: column;
+        box-shadow: 0 0 1.8em .05em #e5e5e5;
     }
     .news {
         @include news-container($web-col);
@@ -983,6 +939,8 @@ footer {
     }
 }
 
+
+// Awards Section
 .awards {
     display: flex;
     justify-content: center;

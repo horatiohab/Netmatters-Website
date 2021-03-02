@@ -302,64 +302,64 @@ nav i {
   font-size: 1.4em;
 }
 
+.nav-list-web i {
+  color: #926FB1;
+}
 .nav-list-web:hover {
   background-color: #926FB1;
 }
 .nav-list-web:hover i {
   color: white;
 }
-.nav-list-web i {
-  color: #926FB1;
-}
 
+.nav-list-it i {
+  color: #4082D6;
+}
 .nav-list-it:hover {
   background-color: #4082D6;
 }
 .nav-list-it:hover i {
   color: white;
 }
-.nav-list-it i {
-  color: #4082D6;
-}
 
+.nav-list-telecoms i {
+  color: #D64541;
+}
 .nav-list-telecoms:hover {
   background-color: #D64541;
 }
 .nav-list-telecoms:hover i {
   color: white;
 }
-.nav-list-telecoms i {
-  color: #D64541;
-}
 
+.nav-list-software i {
+  color: #657E9C;
+}
 .nav-list-software:hover {
   background-color: #657E9C;
 }
 .nav-list-software:hover i {
   color: white;
 }
-.nav-list-software i {
-  color: #657E9C;
-}
 
+.nav-list-marketing i {
+  color: #2DCB70;
+}
 .nav-list-marketing:hover {
   background-color: #2DCB70;
 }
 .nav-list-marketing:hover i {
   color: white;
 }
-.nav-list-marketing i {
-  color: #2DCB70;
-}
 
+.nav-list-cyber i {
+  color: #F62459;
+}
 .nav-list-cyber:hover {
   background-color: #F62459;
 }
 .nav-list-cyber:hover i {
   color: white;
-}
-.nav-list-cyber i {
-  color: #F62459;
 }
 
 .nav-web:hover + .web-dropdown, .web-dropdown:hover,
@@ -1035,6 +1035,7 @@ nav i {
   height: 20em;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 1.8em 0.05em #e5e5e5;
 }
 .news-section .news p {
   font-size: 0.81em;

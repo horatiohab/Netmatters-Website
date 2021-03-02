@@ -43,6 +43,21 @@
     }    
 }
 
+
+// ------ Navbar hover styles ----------
+@mixin nav-hover($col) {
+    i {
+        color: $col;
+    }
+    &:hover {
+        background-color: $col;
+        i {
+            color: white;
+        }
+    }    
+}
+
+
 // ------ Navbar Dropdown styles -------
 
 @mixin dropdown($bg) {
