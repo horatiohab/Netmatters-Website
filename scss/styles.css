@@ -552,7 +552,7 @@ nav i {
 }
 
 .slider-image {
-  background-image: linear-gradient(0.25turn, black, rgba(0, 0, 0, 0)), url("/assets/images/home-3wAI.jpg");
+  background-image: linear-gradient(0.25turn, black, rgba(0, 0, 0, 0)), url("../assets/images/home-3wAI.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
