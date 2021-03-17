@@ -45,10 +45,10 @@
                 
                     <div class="btn-menu">
                         <a href="#" class="btn btn-menu">
-                                <span>
-                                    <hr>
-                                    <hr>
-                                    <hr>
+                                <span class="burger">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
                                 </span>
                             <p>MENU</p>
                         </a>
@@ -59,7 +59,7 @@
 
             <div class="search-mobile">
                 <i class="bi bi-search"></i>
-                <input type="text" id="search" placeholder="Search..." name="name">
+                <input type="text" id="mobile-search" placeholder="Search..." name="name">
             </div>
 
         </header>
@@ -303,7 +303,7 @@
                     </div>
                 
                     <div class="news-container news">
-                        <span><a href="#" class="news-headline"><h3>Faizel Achieves the Long Service Award</h3></a></span><br>
+                        <a href="#" class="news-headline">Faizel Achieves the Long Service Award</a><br>
                         <p>Netmatters would like to take this time to congratulate our Commercial Head of Web, Faizel De...</p>
                         <a href="#" class="btn btn-news">READ MORE</a>
                         <hr>
@@ -327,7 +327,7 @@
                     </div>
 
                     <div class="news-container news">
-                        <span><a href="#" class="news-headline"><h3>Congratulations to Adam Lyon for Graduating t...</h3></a></span><br>
+                        <a href="#" class="news-headline">Congratulations to Adam Lyon for Graduating t...</a><br>
                         <p>We are pleased to announce that after spending 9 months on our Scion Coalition Scheme (SCS)...</p>
                         <a href="#" class="btn btn-news">READ MORE</a>
                         <hr>
@@ -352,7 +352,7 @@
                     </div>
                     
                     <div class="news-container case-studies">
-                        <span><a href="#" class="news-headline"><h3>Clapham & Collinge Case Study</h3></a></span><br>
+                        <a href="#" class="news-headline">Clapham & Collinge Case Study</a><br>
                         <p>Digital marketing is a fantastic way to help improve the presence of your brand across a rang...</p>
                         <a href="#" class="btn btn-case-studies">READ MORE</a>
                         <hr>
@@ -373,10 +373,54 @@
         <!-- Client Section -->
         <div class="client-section">
             <div class="client-logos">
-                <a href="#"><img src="assets/images/busseys_logo.png" alt="Busseys logo"></a>
-                <a href="#"><img src="assets/images/crane_logo.png" alt="Crane logo"></a>
-                <a href="#"><img src="assets/images/beat_logo.png" alt="Beat logo"></a> 
-                <a href="#"><img src="assets/images/northerndriver_logo.jpeg" alt="Northern driver logo"></a>
+                <div class="client-item">
+                    <a href="#">
+                        <img class="image-greyscale" src="assets/images/bussey-greyscale.jpeg" alt="Busseys logo">
+                        <img class="image-hover" src="assets/images/busseys_logo.png" alt="Busseys logo">
+                    </a>
+                    <div class="box">
+                        <h3>Busseys</h3>
+                        <p>One of the UK's leading Ford dealerships.</p>
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+
+                <div class="client-item">
+                    <a href="#">
+                        <img class="image-greyscale" src="assets/images/crane-greyscale.jpeg" alt="Crane logo">
+                        <img class="image-hover" src="assets/images/crane_logo.png" alt="Crane logo">
+                    </a>
+                    <div class="box">
+                        <h3>Crane Garden Builders</h3>
+                        <p>Leading manufacturer and supplier of high-end garden rooms, summerhouses, workshops and sheds in the UK.</p>
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+                
+                <div class="client-item">
+                    <a href="#">
+                        <img class="image-greyscale" src="assets/images/beat-greyscale.jpeg" alt="Beat logo">
+                        <img class="image-hover" src="assets/images/beat_logo.png" alt="Beat logo">
+                    </a> 
+                    <div class="box">
+                        <h3>Beat</h3>
+                        <p>The UK's eating disorder charity founded in 1989.</p>
+                        <div class="arrow"></div>
+                    </div>
+                </div>               
+                
+                <div class="client-item">
+                    <a href="#">
+                        <img class="image-greyscale" src="assets/images/ndriver-greyscale.jpg" alt="Northern driver logo">
+                        <img class="image-hover" src="assets/images/ndiver-logo.png" alt="Northern driver logo">
+                    </a>
+                    <div class="box">
+                        <h3>Northern Diver</h3>
+                        <p>Global water based equipment manufacturers for sport, military, commercial and rescue businesses.</p>
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+                
             </div>                
         </div>
 
@@ -412,7 +456,7 @@
         <!-- Footer Element -->
         <footer class="footer">
             <div class="footer-content">
-                <div class="footer-contact">
+                <div class="footer-contact footer-container">
                     <h4>Contact Us</h4>
                     <p>
                         11 Penfold Drive<br>
@@ -423,7 +467,7 @@
                     <p>Tel: <a href="#">01603 70 40 20</a><br>
                     Email: <a href="#">support@netmatters.com</a></p>
                 </div>
-                <div class="footer-about">
+                <div class="footer-about footer-container">
                     <h4>About Netmatters</h4>
                     <p>
                         <a href="#">News</a><br>
@@ -436,7 +480,7 @@
                         <a href="#">UK Domains</a>
                     </p>
                 </div>
-                <div class="footer-website">
+                <div class="footer-website footer-container">
                     <h4>Website</h4>
                     <p>
                         <a href="#">Sitemap</a><br>
@@ -444,7 +488,7 @@
                         All rights reserved
                     </p>
                 </div>
-                <div class="footer-socials">
+                <div class="footer-socials footer-container">
                     <h4>Social Media</h4>
                     <div class="social-icons">
                         <a href="#"><i class="ri-facebook-fill"></i></a>
@@ -458,17 +502,46 @@
         <!-- Awards -->
         <div class="awards">
             <div class="awards-container">
-                <div class="logo-container">
-                    <img src="assets/images/Google-Partner-Logo.jpg" alt="Google Partner Logo" class="google-partner">
-                    <img src="assets/images/MicrosoftSilverBadge.jpeg" alt="Microsoft Partner Logo" class="microsoft-partner">
-                    <img src="assets/images/Future50Logo.png" alt="Future 50 Logo" class="future50-logo">
-                    <img src="assets/images/qms_iso.jpeg" alt="QMS ISO Logo" class="iso-logo">
-                    <img src="assets/images/Carbon-Charter-Norfolk.png" alt="Norfolk carbon charter Logo" class="carbon-logo">
+                <div class="logo-container top">
+                    <div class="image-container">
+                        <img src="assets/images/Google-Partner-Logo.jpg" alt="Google Partner Logo" class="google-partner">
+                    </div>
+
+                    <div class="image-container">
+                        <img src="assets/images/MicrosoftSilverBadge.jpeg" alt="Microsoft Partner Logo" class="microsoft-partner">
+                    </div>
+
+                    <div class="image-container">
+                        <img class="image-greyscale" src="assets/images/Future50-greyscale.jpeg" alt="Future 50 Logo" class="future50-logo">
+                        <img class="image-hover" src="assets/images/Future50Logo.jpeg" alt="Future 50 Logo" class="future50-logo">
+                    </div>
+
+                    <div class="image-container">
+                        <img class="image-greyscale" src="assets/images/qms-greyscale.jpeg" alt="QMS ISO Logo" class="iso-logo">
+                        <img class="image-hover" src="assets/images/qms_iso.jpeg" alt="QMS ISO Logo" class="iso-logo">
+                    </div>
+
+                    <div class="image-container">
+                        <img class="image-greyscale" src="assets/images/Carbon-Charter-greyscale.jpeg" alt="Norfolk carbon charter Logo" class="carbon-logo">
+                        <img class="image-hover" src="assets/images/Carbon-Charter-Norfolk.jpeg" alt="Norfolk carbon charter Logo" class="carbon-logo">
+                    </div>
                 </div>
-                <div class="logo-container">
-                    <img src="assets/images/future_growth.jpeg" alt="Future growth Logo" class="future-logo">
-                    <img src="assets/images/training_award.jpeg" alt="Training Award Logo" class="training-logo">
-                    <img src="assets/images/tomorrow_skills.jpeg" alt="Skills of tomorrow Logo" class="skills-logo">
+
+                <div class="logo-container bottom">
+                    <div class="image-container">
+                        <img class="image-greyscale" src="assets/images/future_growth-greyscale.jpeg" alt="Future growth Logo" class="future-logo">
+                        <img class="image-hover" src="assets/images/future_growth.jpeg" alt="Future growth Logo" class="future-logo">
+                    </div>
+                    
+                    <div class="image-container">
+                        <img class="image-greyscale" src="assets/images/training-award-greyscale.jpeg" alt="Training Award Logo" class="training-logo">
+                        <img class="image-hover" src="assets/images/training_award.jpeg" alt="Training Award Logo" class="training-logo">
+                    </div>
+                    
+                    <div class="image-container">
+                        <img class="image-greyscale" src="assets/images/tomorrow_skills-greyscale.jpeg" alt="Skills of tomorrow Logo" class="skills-logo">
+                        <img class="image-hover" src="assets/images/tomorrow_skills.jpeg" alt="Skills of tomorrow Logo" class="skills-logo">
+                    </div>                    
                 </div>        
             </div>
         </div>

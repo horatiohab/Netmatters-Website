@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,6 +7,7 @@
 body {
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.8px;
+  overflow-x: hidden;
 }
 
 .btn {
@@ -21,13 +22,18 @@ header {
 }
 
 .header-content {
+  transform-origin: center;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
   width: 1200px;
   display: flex;
   justify-content: space-between;
-  margin: auto;
 }
 .header-content .logo {
   height: 64px;
+  margin-right: 20px;
 }
 .header-content img {
   position: relative;
@@ -43,7 +49,7 @@ header {
 }
 @media (max-width: 1259px) {
   .header-content {
-    width: 970px;
+    width: 955px;
   }
   .header-content input[type=text] {
     display: none;
@@ -54,7 +60,7 @@ header {
 }
 @media (max-width: 991px) {
   .header-content {
-    width: 750px;
+    width: 725px;
   }
   .header-content input[type=text] {
     width: 12.1em;
@@ -67,7 +73,7 @@ header {
 }
 @media (max-width: 767px) {
   .header-content {
-    width: 95%;
+    width: calc(100% - 30px);
   }
   .header-content .search {
     display: none;
@@ -156,14 +162,14 @@ header {
   background: #191a22;
   transition: all 0.15s ease;
 }
-.btn-menu span {
+.btn-menu .burger {
   height: 1.2em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0.3em 0 0.2em;
 }
-.btn-menu span hr {
+.btn-menu .burger span {
   background-color: white;
   color: white;
   height: 3px;
@@ -182,6 +188,7 @@ header {
 .search input {
   padding: 1.3em 0 1.3em 1em;
   font-size: 0.9em;
+  color: #555;
   border: 1px solid #d6d6d6;
   box-shadow: inset 0 0 0.1em 0.01em #d6d6d6;
 }
@@ -221,7 +228,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 95%;
+  width: calc(100% - 50px);
   height: 47px;
   margin: 20px auto auto auto;
   align-items: center;
@@ -289,11 +296,18 @@ nav .nav-list-items .nav-links {
   display: block;
   padding: 1.3em 0;
 }
-nav li a,
-nav li {
+nav .nav-list-items a,
+nav .nav-list-items {
   text-decoration: none;
   text-align: center;
   color: white;
+  width: 197px;
+}
+@media (max-width: 1259px) {
+  nav .nav-list-items a,
+nav .nav-list-items {
+    width: 160px;
+  }
 }
 nav small {
   font-size: 0.63em;
@@ -558,7 +572,6 @@ nav i {
   background-size: cover;
   position: relative;
   height: calc(100vh - 204.6px);
-  width: 100%;
   display: flex;
 }
 @media (max-width: 991px) {
@@ -589,6 +602,7 @@ nav i {
 .slider-image .slider-text h1 {
   font-size: 3em;
   margin-bottom: 0.54em;
+  font-weight: 400;
 }
 .slider-image .slider-text p {
   font-size: 1.25em;
@@ -669,6 +683,7 @@ nav i {
 }
 .cards h1 {
   font-size: 18px;
+  font-weight: 400;
   color: #4e4e4e;
 }
 .cards p {
@@ -921,11 +936,22 @@ nav i {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 991px) {
+  .about-image {
+    background-image: none;
+  }
+}
 .about-image .about-text {
   width: 1200px;
   max-width: 95%;
   color: white;
   padding: 3em 0;
+}
+@media (max-width: 991px) {
+  .about-image .about-text {
+    width: calc(100% - 30px);
+    max-width: 720px;
+  }
 }
 .about-image .about-text h1,
 .about-image .about-text p {
@@ -933,6 +959,12 @@ nav i {
   max-width: 100%;
   margin-bottom: 0.5em;
   line-height: 2em;
+}
+@media (max-width: 991px) {
+  .about-image .about-text h1,
+.about-image .about-text p {
+    width: 750px;
+  }
 }
 .about-image .about-text a {
   color: #333645;
@@ -976,7 +1008,7 @@ nav i {
 }
 
 .news-section {
-  padding: 2.5em 0;
+  padding: 35px 0;
   display: flex;
   justify-content: center;
   box-shadow: 0 0.5em 2em -2em gray;
@@ -999,12 +1031,12 @@ nav i {
 }
 @media (max-width: 767px) {
   .news-section .news-cards {
-    width: 95%;
+    width: 100%;
   }
 }
 .news-section .news-card {
   width: 370px;
-  margin: 0.9em 0;
+  margin: 15px;
 }
 @media (max-width: 1259px) {
   .news-section .news-card {
@@ -1042,11 +1074,12 @@ nav i {
   color: #666;
   margin: auto 0 2em;
 }
-.news-section .news span a {
+.news-section .news .news-headline {
   color: #926FB1;
-  font-size: 0.855em;
+  font-size: 16px;
+  font-weight: 600;
 }
-.news-section .news span a:not(:hover) {
+.news-section .news .news-headline:not(:hover) {
   text-decoration: none;
 }
 .news-section .news h3 {
@@ -1057,11 +1090,12 @@ nav i {
   color: #666;
   margin: auto 0 2em;
 }
-.news-section .case-studies span a {
+.news-section .case-studies .news-headline {
   color: #2DCB70;
-  font-size: 0.855em;
+  font-size: 16px;
+  font-weight: 600;
 }
-.news-section .case-studies span a:not(:hover) {
+.news-section .case-studies .news-headline:not(:hover) {
   text-decoration: none;
 }
 .news-section .case-studies h3 {
@@ -1151,7 +1185,7 @@ nav i {
 .client-section {
   display: flex;
   justify-content: center;
-  padding: 2em 0;
+  padding: 3.125em 0;
 }
 @media (max-width: 767px) {
   .client-section {
@@ -1162,6 +1196,7 @@ nav i {
   width: 1200px;
   display: flex;
   justify-content: space-around;
+  position: relative;
 }
 @media (max-width: 1259px) {
   .client-section .client-logos {
@@ -1183,8 +1218,66 @@ nav i {
     height: 2.82em;
   }
 }
-.client-section img:not(:hover) {
-  filter: grayscale(100%);
+.client-section a {
+  display: flex;
+  justify-content: center;
+}
+.client-section .client-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.client-section .client-item:not(:hover) .box {
+  display: none;
+}
+.client-section .client-item:not(:hover) .image-hover {
+  display: none;
+}
+.client-section .client-item:hover .image-greyscale {
+  display: none;
+}
+.client-section .box {
+  position: absolute;
+  transform-origin: bottom center;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  background-color: #333645;
+  width: 260px;
+  bottom: 120px;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+.client-section .box h3 {
+  position: relative;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 20px 0 15px;
+}
+.client-section .box h3::after {
+  position: absolute;
+  transform-origin: right;
+  content: "";
+  bottom: 0;
+  left: 0;
+  transform: translateX(115px);
+  height: 0.15em;
+  width: 30px;
+  background-color: white;
+}
+.client-section .box p {
+  font-size: 0.8125rem;
+  padding: 10px 20px 20px;
+}
+.client-section .box .arrow {
+  position: absolute;
+  bottom: -35px;
+  left: -36px;
+  transform: translateX(130px);
+  border-left: 36px solid transparent;
+  border-right: 36px solid transparent;
+  border-top: 35px solid #333645;
 }
 
 .newsletter {
@@ -1195,6 +1288,7 @@ nav i {
 }
 .newsletter h1 {
   font-weight: normal;
+  line-height: 1.1em;
 }
 .newsletter .newsletter-form {
   width: 1200px;
@@ -1210,7 +1304,7 @@ nav i {
   }
 }
 .newsletter form {
-  padding: 3em;
+  padding: 2.8125em;
 }
 .newsletter .input-wrapper {
   display: flex;
@@ -1325,12 +1419,13 @@ nav i {
 footer {
   display: flex;
   justify-content: center;
-  padding: 3em 0;
+  padding: 31px 0 43px;
   background-color: #333645;
   color: white;
 }
 footer h4 {
   font-weight: normal;
+  text-transform: uppercase;
 }
 footer p {
   font-size: 13px;
@@ -1345,7 +1440,7 @@ footer p a:not(:hover) {
 footer .footer-content {
   width: 1200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 @media (max-width: 1259px) {
@@ -1360,25 +1455,27 @@ footer .footer-content {
 }
 @media (max-width: 767px) {
   footer .footer-content {
-    width: 92%;
+    width: 100%;
   }
 }
-footer .footer-content div {
-  width: 18em;
+footer .footer-content .footer-container {
+  width: 270px;
   margin: 1em 0;
+  padding: 0 15px;
 }
 @media (max-width: 1259px) {
-  footer .footer-content div {
-    width: 30em;
+  footer .footer-content .footer-container {
+    width: 455px;
+    margin: 1em 0 0;
   }
 }
 @media (max-width: 991px) {
-  footer .footer-content div {
-    width: 23.43em;
+  footer .footer-content .footer-container {
+    width: 345px;
   }
 }
 @media (max-width: 767px) {
-  footer .footer-content div {
+  footer .footer-content .footer-container {
     width: 100%;
   }
 }
@@ -1393,10 +1490,10 @@ footer .social-icons a {
   color: white;
   font-size: 2em;
   background-color: #262833;
-  padding: 0.36em 0;
+  padding: 0.2595em 0;
   display: flex;
   justify-content: center;
-  margin: 0.5em 0;
+  margin-top: 1em;
   width: 3.75em;
 }
 footer .social-icons a:hover {
@@ -1414,7 +1511,8 @@ footer .social-icons a:hover {
 }
 @media (max-width: 767px) {
   footer .social-icons a {
-    width: 48%;
+    width: calc(50% - 15px);
+    margin: 15px 0;
   }
 }
 
@@ -1437,17 +1535,28 @@ footer .social-icons a:hover {
   justify-content: space-around;
   padding: 0.8em 0;
 }
+.awards .image-container:not(:hover) .image-hover {
+  display: none;
+}
+.awards .image-container:hover .image-greyscale {
+  display: none;
+}
 .awards img {
-  max-width: 12em;
-  max-height: 7em;
   height: 100%;
-  margin: auto 1em;
 }
 @media (max-width: 991px) {
   .awards img {
     max-height: 4em;
   }
 }
-.awards img:not(:hover) {
-  filter: grayscale(100);
+.awards .top .image-container {
+  height: 70px;
+}
+@media (max-width: 991px) {
+  .awards .top .image-container {
+    max-height: 58px;
+  }
+}
+.awards .bottom .image-container {
+  height: 58px;
 }/*# sourceMappingURL=styles.css.map */
