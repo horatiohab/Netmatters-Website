@@ -8,11 +8,11 @@
 // Basic Elements
 * {
     padding: 0;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
     letter-spacing: .8px;
     overflow-x: hidden;
 }
@@ -600,10 +600,8 @@ nav {
     div {
         width: 1200px;
         max-width: 95%;
+        display: flex;
         span {
-            display: flex;
-        }
-        h1 {
             font-size: 1.3em;
             color: #333645;
             padding: 1.7em 0;
@@ -1080,5 +1078,9 @@ footer {
         .image-container {
             height: 58px;  
         }        
+    }
+
+    .google-partner {
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.116);
     }
 }
