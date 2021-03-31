@@ -175,7 +175,7 @@ header {
     align-items: center;
     padding-left: 1.3em;
     input {
-        padding: 1.3em 0 1.3em 1em;
+        padding-left: 1em;
         font-size: .9em;
         color: #555;
         border: 1px solid #d6d6d6;
@@ -557,17 +557,22 @@ nav {
         width: 1200px;
         max-width: 95%;
         color: white;
-        padding: 3em 0;
+        padding: 1.5em 0 3em;
         @media (max-width: 991px) {
             width: calc(100% - 30px);
             max-width: 720px;
+        }
+        h1 {
+            font-size: 36px;
+            padding-bottom: .3em;
         }
         h1,
         p {
             width: 600px;
             max-width: 100%;
-            margin-bottom: .5em;
+            // margin-bottom: .5em;
             line-height: 2em;
+            font-weight: 400;
             @media (max-width: 991px) {
                 width: 750px;
             }
@@ -1007,10 +1012,23 @@ footer {
             padding: .2595em 0;
             display: flex;
             justify-content: center;
-            margin-top: 1em;
             width: 3.75em;
-            &:hover {
-                background-color: #3B5998;
+            margin-top: 19.5px;
+            &:nth-of-type(1) {
+                &:hover {
+                    background-color: #395899;
+                }
+            }
+            &:nth-of-type(2) {
+                &:hover {
+                    background-color: #1DA1F2;
+                }
+            }
+            &:nth-of-type(3) {
+                margin-top: 1em;
+                &:hover {
+                    background-color: #0077B7;
+                }
             }
             @media (max-width: 1259px) {
                 width: 6.65em;
