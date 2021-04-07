@@ -3,7 +3,7 @@
 "../scss/partials/variables.scss";
 
 // Webfonts
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 // Basic Elements
 * {
@@ -562,12 +562,12 @@ nav {
             width: calc(100% - 30px);
             max-width: 720px;
         }
-        h1 {
+        h2 {
             font-size: 36px;
             padding-bottom: .3em;
         }
-        h1,
-        p {
+        h2,
+        p, h3 {
             width: 600px;
             max-width: 100%;
             // margin-bottom: .5em;
@@ -576,6 +576,10 @@ nav {
             @media (max-width: 991px) {
                 width: 750px;
             }
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
         }
         a {
             color: $nav-bar-col;

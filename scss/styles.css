@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 * {
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -953,22 +953,26 @@ nav i {
     max-width: 720px;
   }
 }
-.about-image .about-text h1 {
+.about-image .about-text h2 {
   font-size: 36px;
   padding-bottom: 0.3em;
 }
-.about-image .about-text h1,
-.about-image .about-text p {
+.about-image .about-text h2,
+.about-image .about-text p, .about-image .about-text h3 {
   width: 600px;
   max-width: 100%;
   line-height: 2em;
   font-weight: 400;
 }
 @media (max-width: 991px) {
-  .about-image .about-text h1,
-.about-image .about-text p {
+  .about-image .about-text h2,
+.about-image .about-text p, .about-image .about-text h3 {
     width: 750px;
   }
+}
+.about-image .about-text h3 {
+  font-size: 16px;
+  font-weight: 600;
 }
 .about-image .about-text a {
   color: #333645;
