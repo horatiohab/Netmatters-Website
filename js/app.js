@@ -3,7 +3,7 @@ window.onresize = contentPlacement;
 window.onload = contentPlacement;
 
 function contentPlacement() {
-  $(".slider-image").css("margin-top", $(".sticky-header").height());
+  $(".slides").css("margin-top", $(".sticky-header").height());
 }
 
 // Sticky header
@@ -31,3 +31,13 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+
+// Slider
+$(document).ready(function(){
+  $('.slides').slick({ 
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: true
+  });
+});

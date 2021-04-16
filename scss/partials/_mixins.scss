@@ -1,126 +1,162 @@
-
 // --------Button styles -----------
 
 @mixin btn-style {
-    color: white;
-    text-decoration: none;
-    border-radius: 3px;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
 }
 
 @mixin btn-hover($bg) {
-    background: $bg;
-    &:hover {
-        background:darken($bg,12%);
-        transition: all .15s ease;
+  background: $bg;
+  &:hover {
+    background: darken($bg, 12%);
+    transition: all 0.15s ease;
+  }
+}
+
+// ------- Sliders ---------
+@mixin slide($url, $btn-col) {
+  background-image: linear-gradient(
+      0.25turn,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0)
+    ),
+    url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: calc(100vh - 204px);
+  display: flex;
+  @media (max-width: 991px) {
+    height: calc(100vh - 104px);
+  }
+  @media (max-width: 767px) {
+    height: calc(100vh - 171px);
+  }
+  .btn-more {
+    display: flex;
+    @media (max-width: 767px) {
+      justify-content: center;
     }
+    a {
+      @include btn-hover($btn-col);
+      padding: 1em;
+    }
+    span {
+      margin: auto;
+      font-size: 1.25em;
+    }
+    i {
+      display: flex;
+      font-size: 1.8em;
+    }
+  }
 }
 
 // ------- Service Card Button Styles ---------
 
 @mixin card-hover($bg) {
-    background: white;
+  background: white;
+  & span,
+  i {
+    background: $bg;
+    color: white;
+  }
+  & hr {
+    color: rgb(63, 63, 63);
+  }
+  &:hover {
+    background: $bg;
+    color: white;
     & span,
     i {
-        background: $bg;
-        color: white;
+      background: white;
+      color: $bg;
     }
-    & hr {
-       color: rgb(63, 63, 63);
+    & hr,
+    h1,
+    p {
+      color: white;
     }
-    &:hover {
-        background: $bg;
-        color: white;
-        & span,
-        i {
-            background: white;
-            color: $bg;
-        }
-        & hr,
-        h1,
-        p {
-            color: white;
-        }
-    }    
+  }
 }
-
 
 // ------ Navbar hover styles ----------
 @mixin nav-hover($col) {
+  i {
+    color: $col;
+  }
+  &:hover {
+    background-color: $col;
     i {
-        color: $col;
+      color: white;
     }
-    &:hover {
-        background-color: $col;
-        i {
-            color: white;
-        }
-    }    
+  }
 }
-
 
 // ------ Navbar Dropdown styles -------
 
 @mixin dropdown($bg) {
-    display: none;
-    justify-content: center;
-    position: absolute;
-    left: 0;
-    z-index: 10;
-    background-color: $bg;
-    width: 100%;
-    padding: .9em 0;
-    & ul {
-        width: 1200px;
-        list-style-type: none;
-        display: flex;
-        @media (max-width: 1259px) {
-            width: 970px;
-            font-size: .8em;
-        }
+  display: none;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  background-color: $bg;
+  width: 100%;
+  padding: 0.9em 0;
+  & ul {
+    width: 1200px;
+    list-style-type: none;
+    display: flex;
+    @media (max-width: 1259px) {
+      width: 970px;
+      font-size: 0.8em;
     }
+  }
 
-    & li:nth-of-type(1)::after,
-    li:nth-of-type(2)::after,
-    li:nth-of-type(3)::after,
-    li:nth-of-type(4)::after,
-    li:nth-of-type(5)::after {
-        content: "-";
-        margin: 0 2em;
-    }
+  & li:nth-of-type(1)::after,
+  li:nth-of-type(2)::after,
+  li:nth-of-type(3)::after,
+  li:nth-of-type(4)::after,
+  li:nth-of-type(5)::after {
+    content: '-';
+    margin: 0 2em;
+  }
 }
-
 
 // ------- Article Catagory ---------
 
 @mixin catagory($bg) {
-    position: absolute;
-    top: 10px;            
-    right: 0px;
-    color: white;
-    padding: .1em .8em;
-    background-color: $bg;
-    z-index: 1;
-    font-size: .75em;
-    &:not(:hover) {
-        text-decoration: none;
-    }    
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  color: white;
+  padding: 0.1em 0.8em;
+  background-color: $bg;
+  z-index: 1;
+  font-size: 0.75em;
+  &:not(:hover) {
+    text-decoration: none;
+  }
 }
 
 @mixin news-container($col) {
-    p {
-        font-size: .81em;
-        color: #666;
-        margin: auto 0 2em;
+  p {
+    font-size: 0.81em;
+    color: #666;
+    margin: auto 0 2em;
+  }
+  .news-headline {
+    color: $col;
+    font-size: 16px;
+    font-weight: 600;
+    &:not(:hover) {
+      text-decoration: none;
     }
-    .news-headline {
-        color: $col;
-        font-size: 16px;
-        font-weight: 600;
-        &:not(:hover) {
-            text-decoration: none;
-        }
-    }
-    h3 {
-        margin-bottom: auto;
-    }
+  }
+  h3 {
+    margin-bottom: auto;
+  }
 }

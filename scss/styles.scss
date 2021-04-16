@@ -1,13 +1,13 @@
 // Partial imports
-@import "../scss/partials/_mixins.scss", "../scss/partials/_variables.scss";
+@import '../scss/partials/_mixins.scss', '../scss/partials/_variables.scss';
 
 // Webfonts
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 // Basic Elements
 * {
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
 }
 
@@ -27,9 +27,6 @@ body {
   position: absolute;
   width: 100%;
   z-index: 100;
-
-  //   transition: 200ms;
-  //   transition-delay: 500ms;
 }
 
 // Header
@@ -59,13 +56,13 @@ header {
     width: 370px;
   }
   @media (min-width: 1260px) {
-    input[type="text"] {
+    input[type='text'] {
       width: 16.5em;
     }
   }
   @media (max-width: 1259px) {
     width: 955px;
-    input[type="text"] {
+    input[type='text'] {
       display: none;
     }
     .btn-search {
@@ -74,7 +71,7 @@ header {
   }
   @media (max-width: 991px) {
     width: 725px;
-    input[type="text"] {
+    input[type='text'] {
       width: 12.1em;
       display: flex;
     }
@@ -368,66 +365,64 @@ nav {
 }
 
 // Slider
-.slider-image {
-  background-image: linear-gradient(
-      0.25turn,
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0)
-    ),
-    url("../assets/images/home-3wAI.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  height: calc(100vh - 204px);
-  // margin-top: 204px;
-  display: flex;
-  @media (max-width: 991px) {
-    height: calc(100vh - 104px);
-    // margin-top: 104px;
-  }
+.slide1 {
+  @include slide('../assets/images/home-3wAI.jpg', $web-col);
+}
+
+.slide2 {
+  @include slide('../assets/images/asset 4.jpeg', $it-col);
+}
+
+.slide3 {
+  @include slide('../assets/images/asset 5.jpeg', $telecoms-col);
+}
+
+.slide4 {
+  @include slide('../assets/images/asset 6.jpeg', $software-col);
+}
+
+.slide5 {
+  @include slide('../assets/images/asset 1.jpeg', $marketing-col);
+}
+
+.slide6 {
+  @include slide('../assets/images/asset 2.jpeg', $cyber-col);
+}
+
+.slider-text {
+  width: 1200px;
+  max-width: 90%;
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
   @media (max-width: 767px) {
-    height: calc(100vh - 171px);
-    // margin-top: 171px;
+    text-align: center;
   }
-  .slider-text {
-    width: 1200px;
-    max-width: 90%;
-    text-align: left;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.54em;
+    font-weight: 400;
+  }
+  p {
+    font-size: 1.25em;
+    margin-bottom: 1.75em;
+  }
+}
+
+.slick-dots {
+  bottom: 2em;
+  li button::before {
+    font-size: 13px;
     color: white;
-    @media (max-width: 767px) {
-      text-align: center;
-    }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.54em;
-      font-weight: 400;
-    }
-    p {
-      font-size: 1.25em;
-      margin-bottom: 1.75em;
-    }
   }
-  .btn-more {
-    display: flex;
-    @media (max-width: 767px) {
-      justify-content: center;
-    }
-    a {
-      @include btn-hover($web-col);
-      padding: 1em;
-    }
-    span {
-      margin: auto;
-      font-size: 1.25em;
-    }
-    i {
-      display: flex;
-      font-size: 1.8em;
+  li {
+    &.slick-active button:before {
+      color: white;
+      border: 2px solid white;
+      border-radius: 50%;
     }
   }
 }
@@ -562,7 +557,7 @@ nav {
 // About Section
 .about-image {
   background-color: $nav-bar-col;
-  background-image: url("/assets/images/netmatters-logo-bg.png");
+  background-image: url('/assets/images/netmatters-logo-bg.png');
   background-position: 100%;
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -820,7 +815,7 @@ nav {
     h3::after {
       position: absolute;
       transform-origin: right;
-      content: "";
+      content: '';
       bottom: 0;
       left: 0;
       transform: translateX(115px);
@@ -876,7 +871,7 @@ nav {
     label {
       font-weight: bold;
       &::after {
-        content: " *";
+        content: ' *';
         color: #db2b2b;
       }
     }
@@ -886,7 +881,7 @@ nav {
     flex-direction: column;
     margin-top: 1em;
   }
-  input[type="text"] {
+  input[type='text'] {
     width: 540px;
     padding: 1em 1em;
     border: 1px solid #ccc;
@@ -939,7 +934,7 @@ nav {
       height: 30%;
       width: 0.15em;
       background-color: white;
-      content: "";
+      content: '';
       transform: translateX(-0.2em) rotate(-45deg);
       transform-origin: left bottom;
     }
@@ -950,12 +945,12 @@ nav {
       height: 0.12em;
       width: 60%;
       background-color: white;
-      content: "";
+      content: '';
       transform: translateX(-0.2em) rotate(-45deg);
       transform-origin: left bottom;
     }
   }
-  input[type="submit"] {
+  input[type='submit'] {
     background-color: $nav-bar-col;
     color: white;
     padding: 1em;
