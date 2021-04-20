@@ -1,5 +1,5 @@
 // Partial imports
-@import '../scss/partials/_mixins.scss', '../scss/partials/_variables.scss';
+@import '../scss/partials/_sidenav.scss', '../scss/partials/_mixins.scss', '../scss/partials/_variables.scss', '../scss/hamburgers/hamburgers.scss';
 
 // Webfonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
@@ -152,28 +152,19 @@ header {
 .btn-menu {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  padding-left: 1.3em;
-  a {
+  margin-left: 20px;
+  button {
+    border-style: none;
+    background: none;
+    cursor: pointer;
     @include btn-hover(#333645);
-    padding: 0.32em 0.9em;
+    padding: 10px 15px 5px;
+    border-radius: 3px;
+    
   }
-  .burger {
-    height: 1.2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0.3em 0 0.2em;
-    span {
-      background-color: white;
-      color: white;
-      height: 3px;
-      border: none;
-    }
-  }
-  p {
-    font-size: 0.75em;
-    margin: auto;
+  .menu-text {
+    font-size: 12px;
+    padding-top: 4.1px;
   }
 }
 

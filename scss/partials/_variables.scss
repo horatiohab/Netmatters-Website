@@ -8,3 +8,12 @@ $telecoms-col: #D64541;
 $software-col: #657E9C;
 $marketing-col: #2DCB70;
 $cyber-col: #F62459;
+
+$colours: (
+    web       : $web-col, // web
+    it        : $it-col, // it
+    telecoms  : $telecoms-col, // telecoms
+    software  : $software-col, // software
+    marketing : $marketing-col, // marketing
+    cyber     : $cyber-col //cyber
+);

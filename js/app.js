@@ -1,3 +1,32 @@
+// Slider
+$(document).ready(function(){
+  $('.slides').slick({ 
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: true
+  });
+});
+
+// Burger button
+const hamburger = document.querySelector(".hamburger");
+const scrollContainer = document.querySelector(".scroll-container");
+const greyedOut = document.querySelector(".greyed-out");
+
+hamburger.addEventListener("click", function() {
+  hamburger.classList.toggle("is-active");
+  greyedOut.classList.toggle("grey-active");
+  scrollContainer.classList.toggle("scroll-containerClick");
+  document.querySelector(".side-nav").style.right = "0";
+});
+
+greyedOut.addEventListener("click", function() { // Resets menu and hamburger when clicking greyed out area
+  hamburger.classList.toggle("is-active");
+  greyedOut.classList.toggle("grey-active");
+  scrollContainer.classList.toggle("scroll-containerClick");
+  document.querySelector(".side-nav").style.right = "-350px";
+});
+
 // Keeps content below sticky header
 window.onresize = contentPlacement;
 window.onload = contentPlacement;
@@ -31,13 +60,3 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
-
-// Slider
-$(document).ready(function(){
-  $('.slides').slick({ 
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    dots: true
-  });
-});
