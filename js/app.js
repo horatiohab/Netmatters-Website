@@ -1,3 +1,25 @@
+// Cookies popup
+const acceptCookies = document.querySelector(".accept-btn");
+const popUp = document.querySelector(".cookies-inactive");
+const accepted = localStorage.getItem(popUp);
+const body = document.querySelector("body");
+
+if (accepted) {
+  localStorage.setItem(popUp, popUp.style.display = "none");
+}
+
+if (!accepted) {
+  body.style.position = "fixed";
+  body.style.width = "100vw";
+};
+
+acceptCookies.addEventListener("click", function() {
+  localStorage.setItem(popUp, popUp.style.display = "none");
+  body.style.position = "";
+  body.style.width = "";
+});
+
+
 // Slider
 $(document).ready(function(){
   $('.slides').slick({ 

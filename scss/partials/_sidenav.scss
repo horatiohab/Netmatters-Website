@@ -53,15 +53,15 @@
 }
 
 .scroll-containerClick {
-  right: 350px;
-  position: relative;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  width: 100vw;
-  height: 100vh;
-  @media (max-width: 990px) {
-    right: 275px;
-}
+    right: 350px;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    @media (max-width: 990px) {
+        right: 275px;
+    }
 }
 
 .grey-active {
@@ -102,7 +102,6 @@
         color: white;
     }
     .mobile-nav-title {
-        
         a {
             display: block;
             padding: 20px 0;
