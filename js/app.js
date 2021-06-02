@@ -38,15 +38,15 @@ const greyedOut = document.querySelector(".greyed-out");
 hamburger.addEventListener("click", function() {
   hamburger.classList.toggle("is-active");
   greyedOut.classList.toggle("grey-active");
-  scrollContainer.classList.toggle("scroll-containerClick");
-  document.querySelector(".side-nav").style.right = "0";
+  scrollContainer.classList.toggle("menu-active");
+  // document.querySelector(".side-nav").style.maxWidth = "100%";
 });
 
 greyedOut.addEventListener("click", function() { // Resets menu and hamburger when clicking greyed out area
   hamburger.classList.toggle("is-active");
   greyedOut.classList.toggle("grey-active");
-  scrollContainer.classList.toggle("scroll-containerClick");
-  document.querySelector(".side-nav").style.right = "-350px";
+  scrollContainer.classList.toggle("menu-active");
+  // document.querySelector(".side-nav").style.maxWidth = "0%";
 });
 
 // Keeps content below sticky header

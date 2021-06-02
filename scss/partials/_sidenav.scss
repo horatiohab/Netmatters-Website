@@ -1,22 +1,28 @@
 @import '../partials/_variables.scss';
 
 .side-nav {
-    height: 100vh;
+    // display: none;
+    height: 100%;
     width: 350px;
-    position: absolute;
-    z-index: 1000;
+    position: fixed;
+    z-index: -100;
     top: 0;
-    right: -350px;
-    overflow-y: scroll;
+    right: 0;
+    // overflow-y: scroll;
+    overflow: auto;
     scrollbar-color: rgb(122, 122, 122) rgb(42, 42, 44);
+    transition: all 0.5s ease;
+
     @media (max-width: 990px) {
         width: 275px;
     }
+
     .nav-title {
         display: block;
         border-top: 1px solid rgba(255, 255, 255, 0.11);
         border-bottom: 1px solid rgba(0, 0, 0, 0.171);
         background-color: #333645;
+
         a {
             display: block;
             padding: 16px 20px;
@@ -24,20 +30,23 @@
             text-decoration: none;
         }
     }
+
     .nav-items {
         // display: block;
         border-top: 1px solid rgba(255, 255, 255, 0.068);
         border-bottom: 1px solid rgba(0, 0, 0, 0.171);
-        
+
         background-color: #262934;
         list-style-type: none;
-        
+
         font-size: 14px;
+
         a {
             display: block;
             color: white;
             padding: 15px 20px;
             text-decoration: none;
+
             &::before {
                 display: inline-block;
                 content: "\00BB";
@@ -45,6 +54,7 @@
             }
         }
     }
+
     ul:hover {
         .nav-title {
             background-color: #3D404E;
@@ -52,13 +62,26 @@
     }
 }
 
-.scroll-containerClick {
+.scroll-container {
+    // display: none;
+    right: 0px;
+    position: absolute;
+
+
+    height: 100%;
+    width: 100%;
+    top: 0;
+    transition: all 0.5s ease;
+}
+
+.menu-active {
+    position: fixed;
     right: 350px;
-    position: relative;
-    overflow-y: scroll;
+    // transition: all 0.5s ease;
     overflow-x: hidden;
-    width: 100vw;
-    height: 100vh;
+    overflow-y: auto;
+
+
     @media (max-width: 990px) {
         right: 275px;
     }
@@ -67,7 +90,7 @@
 .grey-active {
     position: fixed;
     content: '';
-    background: rgba(0,0,0, 0.4);
+    background: rgba(0, 0, 0, 0.4);
     top: 0;
     width: 100vw;
     height: 100vh;
@@ -79,28 +102,35 @@
     display: block;
     padding: 0 21px;
     background-color: #333645;
+
     @media (min-width: 990px) {
         display: none;
     }
+
     text-align: center;
+
     ul {
         list-style-type: none;
         padding-top: 20px;
+
         li {
             &:nth-child(2) {
-            margin-top: 20px;
+                margin-top: 20px;
             }
         }
     }
+
     ul:hover {
         .mobile-nav-title {
             background-color: #3D404E;
         }
     }
+
     a {
         text-decoration: none;
         color: white;
     }
+
     .mobile-nav-title {
         a {
             display: block;
@@ -109,11 +139,13 @@
             border-radius: 3px;
             box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.466);
             font-size: 1.125rem;
+
             small {
                 font-size: .625rem;
             }
         }
     }
+
     .mobile-nav-item {
         a {
             display: block;
@@ -126,7 +158,8 @@
 }
 
 // icon colours
-@each $icon, $col in $colours {
+@each $icon,
+$col in $colours {
     .#{$icon} {
         font-size: 1.3em;
         color: $col;
