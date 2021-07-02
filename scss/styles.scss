@@ -27,6 +27,23 @@ body {
   position: absolute;
   width: 100%;
   z-index: 100;
+  // transition: 0ms;
+  // transition-delay: 0ms;
+}
+
+.sticky-header-scroll {
+  position: fixed;
+  top: -204.6px;
+  // transition: 200ms;
+  // transition-delay: 500ms;
+  
+}
+
+.sticky-header-fixed {
+  position: fixed;
+  top: 0;
+  // transition: 200ms;
+  // transition-delay: 500ms;
 }
 
 // Header

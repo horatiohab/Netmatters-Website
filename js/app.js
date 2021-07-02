@@ -59,26 +59,27 @@ function contentPlacement() {
 
 // Sticky header
 let prevScrollpos = window.pageYOffset;
+let stickyHeader = document.querySelector(".sticky-header");
 
 window.onscroll = function () {
   const scrollPos = $(window).scrollTop();
   let currentScrollPos = window.pageYOffset;
 
   if (scrollPos < 1) {
-    document.querySelector(".sticky-header").style.transition = "0ms";
-    document.querySelector(".sticky-header").style.transitionDelay = "0ms";
-    document.querySelector(".sticky-header").style.position = "absolute";
-    document.querySelector(".sticky-header").style.top = "0";
+    stickyHeader.style.transition = "0ms";
+    stickyHeader.style.transitionDelay = "0ms";
+    stickyHeader.classList.remove("sticky-header-scroll");
+    stickyHeader.classList.remove("sticky-header-fixed");
   }
-  if (scrollPos > 500) {
-    document.querySelector(".sticky-header").style.transition = "200ms";
-    document.querySelector(".sticky-header").style.transitionDelay = "500ms";
-    if (prevScrollpos < currentScrollPos) {
-      document.querySelector(".sticky-header").style.top = "-204px";
-    } else {
-      document.querySelector(".sticky-header").style.position = "fixed";
-      document.querySelector(".sticky-header").style.top = "0";
-    }
+  if (scrollPos > 500 && prevScrollpos < currentScrollPos) {
+    stickyHeader.classList.add("sticky-header-scroll");
+    stickyHeader.classList.remove("sticky-header-fixed");
+  }
+  if (scrollPos > 500 && prevScrollpos > currentScrollPos) {
+    stickyHeader.style.transition = "200ms";
+    stickyHeader.style.transitionDelay = "500ms";
+    stickyHeader.classList.add("sticky-header-fixed");
+    stickyHeader.classList.remove("sticky-header-scroll");
   }
   prevScrollpos = currentScrollPos;
 };
