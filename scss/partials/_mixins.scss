@@ -160,3 +160,38 @@
     margin-bottom: auto;
   }
 }
+
+
+// ------- Text Input ---------
+
+@mixin text-input() {
+  
+  padding: 1em 1em;
+  border: 1px solid #ccc;
+  border-radius: 2.5px;
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+    border: 1px solid #74c8f2;
+    box-shadow: 0 0 0.5em 0 #74c8f2;
+  }
+}
+
+// Submit button style
+
+@mixin submit($submit-bg-col) {
+  background-color: $submit-bg-col;
+  color: white;
+  padding: 1em;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 2em;
+
+  &:hover {
+    background-color: darken($submit-bg-col, 12%);
+    cursor: pointer;
+  }
+}

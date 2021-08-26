@@ -1,5 +1,5 @@
 // Partial imports
-@import '../scss/partials/_sidenav.scss', '../scss/partials/_mixins.scss', '../scss/partials/_variables.scss', '../scss/hamburgers/hamburgers.scss', '../scss/partials/_cookies-alert.scss';
+@import '../scss/partials/_sidenav.scss', '../scss/partials/_mixins.scss', '../scss/partials/_variables.scss', '../scss/hamburgers/hamburgers.scss', '../scss/partials/_cookies-alert.scss', '../scss/partials/contact.scss';
 
 // Webfonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
@@ -1029,12 +1029,8 @@ nav {
   }
 
   input[type='text'] {
+    @include text-input();
     width: 540px;
-    padding: 1em 1em;
-    border: 1px solid #ccc;
-    border-radius: 2.5px;
-    box-sizing: border-box;
-
     @media (max-width: 1259px) {
       width: 425px;
     }
@@ -1043,11 +1039,6 @@ nav {
       width: 100%;
     }
 
-    &:focus {
-      outline: none;
-      border: 1px solid #74c8f2;
-      box-shadow: 0 0 0.5em 0 #74c8f2;
-    }
   }
 
   .checkbox-container {
@@ -1109,20 +1100,7 @@ nav {
   }
 
   input[type='submit'] {
-    background-color: $nav-bar-col;
-    color: white;
-    padding: 1em;
-    border: none;
-    border-radius: 3px;
-    font-size: 1em;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    margin-top: 2em;
-
-    &:hover {
-      background-color: #22242e;
-      cursor: pointer;
-    }
+    @include submit($nav-bar-col);
   }
 }
 

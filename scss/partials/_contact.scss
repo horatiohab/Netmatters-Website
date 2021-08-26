@@ -1,0 +1,52 @@
+.contact-section {
+    display: flex;
+    justify-content: center;
+    padding: 280px 0 5em; 
+    background-color: white;
+    @media (max-width: 991px) {
+        padding: 210px 0 5em; 
+    }
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    max-width: 80%;
+    background-color: #E6E7E9;
+    border-radius: .4em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+}
+
+.contact-card {
+    padding: 3em;
+    width: 80%;
+    h1 {
+        font-weight: normal;
+        line-height: 1.1em;
+        margin-bottom: 1em;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+    input[type='text'] {
+        @include text-input();
+        margin-bottom: 1em;
+    }
+    textarea {
+        @include text-input();
+    }
+    input[type='submit'] {
+        @include submit($web-col);
+    }
+}
+
+.form-status {
+    display: flex;
+    justify-content: center;
+    span {
+        width: 10px;
+    }
+}
