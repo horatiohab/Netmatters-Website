@@ -47,6 +47,11 @@
     display: flex;
     justify-content: center;
     span {
-        width: 10px;
+        border: 1px solid red;
+        background-color: black;
     }
+}
+
+.invalid-input {
+    border-color: red !important;
 }
