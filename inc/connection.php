@@ -2,7 +2,7 @@
 
 $host = 'localhost';
 $db = 'netmatters_db';
-$user = 'horatio';
+$user = 'root';
 $password = 'test1234';
 
 try {

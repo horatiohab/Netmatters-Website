@@ -1,5 +1,5 @@
 // Partial imports
-@import '../scss/partials/_sidenav.scss', '../scss/partials/_mixins.scss', '../scss/partials/_variables.scss', '../scss/hamburgers/hamburgers.scss', '../scss/partials/_cookies-alert.scss', '../scss/partials/contact.scss';
+@import '../scss/partials/_sidenav.scss', '../scss/partials/_mixins.scss', '../scss/partials/_variables.scss', '../scss/hamburgers/hamburgers.scss', '../scss/partials/_cookies-alert.scss', '../scss/partials/_contact.scss';
 
 // Webfonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
@@ -36,7 +36,7 @@ body {
   top: -204.6px;
   // transition: 200ms;
   // transition-delay: 500ms;
-  
+
 }
 
 .sticky-header-fixed {
@@ -802,11 +802,11 @@ nav {
     position: relative;
   }
 
-  .catagory-news {
+  .category-news {
     @include catagory($web-col);
   }
 
-  .catagory-case-studies {
+  .category-case-studies {
     @include catagory($marketing-col);
   }
 
@@ -1031,6 +1031,7 @@ nav {
   input[type='text'] {
     @include text-input();
     width: 540px;
+
     @media (max-width: 1259px) {
       width: 425px;
     }

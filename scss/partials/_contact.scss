@@ -52,6 +52,11 @@
 .form-status {
     display: flex;
     justify-content: center;
+
+    span {
+        //border: 1px solid red;
+        //background-color: black;
+    }
 }
 
 .invalid-input {
