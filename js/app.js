@@ -83,3 +83,8 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+
+// contact accordion
+$(".accordion-btn").click(function() {
+  $(".accordion").slideToggle();
+});

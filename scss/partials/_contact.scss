@@ -7,22 +7,40 @@
     @media (max-width: 991px) {
         padding: 210px 0 5em;
     }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 1.56em;
+
+        strong {
+            font-weight: 600;
+        }
+    }
+
+    a {
+        font-size: 26px;
+        font-weight: 600;
+        color: $web-col;
+
+        &:not(:hover) {
+            text-decoration: none;
+        }
+    }
 }
 
-.contact-container {
+.contact-wrapper {
+    width: 1200px;
     display: flex;
-    justify-content: center;
-    width: 900px;
-    max-width: 80%;
-    background-color: #E6E7E9;
-    border-radius: .4em;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
 }
 
 .contact-card {
     padding: 3em;
-    width: 80%;
+    width: 100%;
+    height: fit-content;
+    background-color: #E6E7E9;
+    border-radius: .4em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     h1 {
         font-weight: normal;
@@ -61,4 +79,35 @@
 
 .invalid-input {
     border-color: red !important;
+}
+
+.contact-info {
+    width: 38em;
+    margin-left: 2em;
+}
+
+.accordion-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 1.56em;
+
+    &:hover {
+
+        span {
+            text-decoration: underline;
+        }
+    }
+}
+
+.accordion {
+    display: none;
+
+    i {
+        font-size: 1.5em;
+    }
 }

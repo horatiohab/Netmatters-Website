@@ -7,7 +7,7 @@
         include("inc/connection.php");
 
         try {
-            $sql = 'SELECT * FROM news_articles';
+            $sql = 'SELECT * FROM news_articles LIMIT 3';
 
             $q = $pdo->query($sql);
             $q->setFetchMode(PDO::FETCH_ASSOC);
